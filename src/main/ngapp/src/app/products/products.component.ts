@@ -14,13 +14,13 @@ export interface Product {
 })
 
 export class ProductsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'itemName', 'itemDescription', 'price'];
-  dataSource = [];
+
+  products = [];
 
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((res: Product[]) => { this.dataSource = res; });
+    this.productService.getProducts().subscribe((res: Product[]) => { this.products = res; });
   }
 
 }

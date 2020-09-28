@@ -1,0 +1,47 @@
+<mat-sidenav-container class="desktop">
+  <mat-sidenav #snav mode="side" fixedInViewport="true" opened="true" fixedTopGap="0">
+    <div class="mat-sidenav-header">
+      <h3 id="user-name" class="mat-sidenav-title">Maclean</h3>
+      <h6 id="user-email" class="mat-sidenav-subtitle">macleanmauricepinto@gmail.com</h6>
+      <mat-list>
+        <mat-list-item> <a id="home-page" routerLink="/home" routerLinkActive="active">Home</a> </mat-list-item>
+        <mat-list-item> <a id="products-page" routerLink="/products" routerLinkActive="active">Products</a>
+        </mat-list-item>
+        <mat-list-item> <a id="orders-page" routerLink="/orders" routerLinkActive="active">My Orders</a>
+        </mat-list-item>
+        <mat-list-item>About</mat-list-item>
+      </mat-list>
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <header id="header" class="header">
+      <mat-toolbar class="app-toolbar" color="primary">
+        <button mat-icon-button (click)="snav.toggle()" class="menu-btn">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="app-title">McaCart</span>
+        <span class="spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu" class="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>cart</mat-icon>
+            <span>Cart</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </mat-toolbar>
+    </header>
+
+    <section id="main" class="main">
+      <div id="page-content" class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

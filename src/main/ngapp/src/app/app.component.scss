@@ -1,0 +1,136 @@
+.main {
+    padding-top: 48px;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.main.error-page {
+    background: #263746;
+    max-width: initial;
+    height: 100vh;
+    padding: 100px 50px;
+    margin: 0;
+}
+
+.page-content {
+    display: block;
+    position: relative;
+    min-height: calc(100vh - 156px);
+}
+
+.main.error-page .page-content {
+    min-height: initial;
+}
+
+.about-btn {
+  color: #009bde;
+}
+
+.menu-btn,
+.menu-btn .mat-icon {
+  outline: none;
+}
+
+.mat-toolbar.app-toolbar .app-actions  li.app-link  a.active {
+  border-bottom: 2px solid white;
+}
+
+/* App switcher menu css */
+
+::ng-deep.cdk-overlay-pane {
+  transform: translate(-35px, -7px);
+}
+
+::ng-deep .mat-menu-panel .mat-menu-item:focus {
+  outline: none !important;
+}
+
+
+.apps-link,
+.home-link {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.apps-link .mat-icon,
+.home-link .mat-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/* Mat Drawer css */
+
+.mat-sidenav-container {
+    height: 100%;
+  }
+ 
+  mat-sidenav {
+    border-color: rgba(0, 0, 0, 0.12);
+    border-right-width: 1px;
+    border-right-style: solid;
+    background-color: #fff;
+    border-radius: 0 0 0 0;
+    z-index: 6;
+    width: 16.962rem;
+    position: fixed;
+  }
+ 
+  .desktop mat-sidenav {
+    top: 0;
+  }
+ 
+  .mat-sidenav-header {
+    flex-shrink: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 64px;
+    padding: 13px 24px 4px;
+  }
+ 
+  .desktop .header {
+    position: sticky;
+    top:0;
+  }
+ 
+  .mobile .header {
+    position: fixed;
+  }
+ 
+  .desktop .mat-sidenav-content .main {
+    margin-top: 0rem;
+  }
+ 
+  .mobile .mat-sidenav-content .main {
+    margin-top: 4.6785rem;
+  }
+ 
+  .mat-sidenav-title {
+    font-size: 1.25rem;
+    line-height: 2rem !important;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+    display: block;
+    margin-top: 0;
+    line-height: normal;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 0;
+  }
+ 
+  .mat-sidenav-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    display: block;
+    margin-top: 0;
+    line-height: normal;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+
+.menu{
+    position: absolute;
+    right:10px;
+}
